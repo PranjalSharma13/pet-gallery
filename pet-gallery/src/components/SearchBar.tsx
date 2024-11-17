@@ -11,7 +11,7 @@ const SearchBarContainer = styled.div`
   max-width: 400px; /* Adjust width as needed */
 `;
 const SearchIcon = styled(FaSearch)`
-  color: #888;
+  color: #333;
   font-size: 20px;
   margin-right: 10px; /* Space between icon and input */
 `;
@@ -26,7 +26,7 @@ const SearchInput = styled.input`
   color: #333;
   
   &::placeholder {
-    color: #888;
+    color: #333;
   }
 
   &:focus {
