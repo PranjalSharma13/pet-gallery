@@ -1,10 +1,8 @@
-import React from 'react';
-
 const SearchBar = ({ setSearchTerm }: { setSearchTerm: (term: string) => void }) => {
   return (
     <input
       type="text"
-      placeholder="Search..."
+      placeholder="Search by title or description..."
       onChange={(e) => setSearchTerm(e.target.value)}
     />
   );
