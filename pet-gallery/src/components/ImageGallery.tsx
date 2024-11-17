@@ -4,6 +4,9 @@ import ImageCard from './ImageCard';
 import styled from 'styled-components';
 import SearchBar from './SearchBar';
 import { saveAs } from 'file-saver';
+import SortButtons from './SortButtons';
+import DownloadButtons from './DownloadButton';
+import SelectionButtons from './SelectionButton';
 
 
 const GalleryContainer = styled.div`
@@ -15,8 +18,10 @@ const GalleryContainer = styled.div`
 
 const ControlsContainer = styled.div`
   display: flex;
-  justify-content: space-between;
+  justify-content: flex-start; /* Align buttons to the left */
+  gap: 16px; /* Add spacing between buttons */
   margin: 16px 0;
+  flex-wrap: wrap;
 `;
 
 const ImageWrapper = styled.div<{ isSelected: boolean }>`
@@ -100,19 +105,12 @@ const ImageGallery: React.FC = () => {
     <div>
       <ControlsContainer>
         <SearchBar setSearchTerm={handleSearchChange} />
-        <div>
-          <button onClick={() => handleSort('asc')}>Sort A-Z</button>
-          <button onClick={() => handleSort('desc')}>Sort Z-A</button>
-          <button onClick={handleDownloadSelected} disabled={selected.size === 0}>
-            Download Selected
-          </button>
-          <button onClick={handleSelectAll}>
-            Select All
-          </button>
-          <button onClick={handleClearSelection}>
-            Clear Selection
-          </button>
-        </div>
+        <SortButtons handleSort={handleSort}  selectedSortOrder={selectedSortOrder}/>
+        <DownloadButtons handleDownloadSelected={handleDownloadSelected} selectedSize={selected.size} />
+          <SelectionButtons
+            handleSelectAll={handleSelectAll}
+            handleClearSelection={handleClearSelection}
+          />
       </ControlsContainer>
       <GalleryContainer>
         {sortedPets.map((pet) => (
