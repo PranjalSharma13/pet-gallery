@@ -85,6 +85,16 @@ const ImageGallery: React.FC = () => {
       }
     });
   };
+   // Select all images
+   const handleSelectAll = () => {
+    const allIds = new Set(petsWithId.map((pet) => pet.id));
+    setSelected(allIds); // Add all pet IDs to selected
+  };
+
+  // Clear selection
+  const handleClearSelection = () => {
+    setSelected(new Set()); // Clear the selected set
+  };
 
   return (
     <div>
@@ -95,6 +105,12 @@ const ImageGallery: React.FC = () => {
           <button onClick={() => handleSort('desc')}>Sort Z-A</button>
           <button onClick={handleDownloadSelected} disabled={selected.size === 0}>
             Download Selected
+          </button>
+          <button onClick={handleSelectAll}>
+            Select All
+          </button>
+          <button onClick={handleClearSelection}>
+            Clear Selection
           </button>
         </div>
       </ControlsContainer>
