@@ -11,10 +11,12 @@ import SelectionButtons from './SelectionButton';
 
 const GalleryContainer = styled.div`
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  gap: 16px;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible columns */
+  gap: 16px; /* Space between cards */
   padding: 16px;
+  align-items: start; /* Align cards at the start to prevent extra gaps */
 `;
+
 
 const ControlsContainer = styled.div`
   display: flex;
