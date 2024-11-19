@@ -14,14 +14,14 @@ const GalleryContainer = styled.div`
   grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); /* Flexible columns */
   gap: 16px; /* Space between cards */
   padding: 16px;
-  align-items: start; /* Align cards at the start to prevent extra gaps */
+  align-items: start; /* Aligned cards at the start to prevent extra gaps */
 `;
 
 
 const ControlsContainer = styled.div`
   display: flex;
-  justify-content: flex-start; /* Align buttons to the left */
-  gap: 16px; /* Add spacing between buttons */
+  justify-content: flex-start; /* Aligned buttons to the left */
+  gap: 16px; /* Added spacing between buttons */
   margin: 16px 0;
   flex-wrap: wrap;
 `;
@@ -116,7 +116,7 @@ const ImageGallery: React.FC = () => {
           <ImageCard
           key={pet.id}
           pet={pet}
-          isSelected={selected.has(pet.id)} // Apply selection border conditionally
+          isSelected={selected.has(pet.id)} // Applied selection border 
           onClick={() => toggleSelect(pet.id)} // Toggle selection on click
         />
         ))}

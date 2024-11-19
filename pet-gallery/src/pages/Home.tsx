@@ -2,7 +2,7 @@
 import styled from 'styled-components';
 import ImageGallery from "../components/ImageGallery";
 
-// Styled component to add margin-top for space below the fixed navbar
+// Styled component 
 const HomeWrapper = styled.div`
   margin-top: 60px; 
   padding: 20px;

@@ -8,7 +8,7 @@ const SearchBarContainer = styled.div`
   border-radius: 25px;
   background-color: #f2f2f2;
   padding: 5px 15px;
-  max-width: 400px; /* Adjust width as needed */
+  max-width: 400px; /* Adjusted width as needed */
 `;
 const SearchIcon = styled(FaSearch)`
   color: #333;

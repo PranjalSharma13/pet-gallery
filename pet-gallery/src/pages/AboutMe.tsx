@@ -1,7 +1,7 @@
 
 import styled from 'styled-components';
 
-// Styled component to add margin-top for space below the fixed navbar
+// Styled component 
 const AboutWrapper = styled.div`
   margin-top: 60px; 
   padding: 20px;

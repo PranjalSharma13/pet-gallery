@@ -13,27 +13,30 @@ const Card = styled.div<{ isSelected: boolean }>`
   transition: background 0.3s ease, border 0.3s ease;
 
   display: flex;
-  flex-direction: column; /* Stack content vertically */
-  height: auto; /* Allow dynamic height based on content */
+  flex-direction: column; /* Stacked content vertically */
+  height: auto; /* Allowed dynamic height based on content */
 `;
 
 const PetImage = styled.img`
   width: 100%;
-  height: auto; /* Maintain aspect ratio */
+  height: auto; /* Maintained aspect ratio */
   border-radius: 8px;
-  margin-bottom: 8px; /* Add spacing below the image */
+  margin-bottom: 8px; /* Added spacing below the image */
 `;
 
 const Title = styled.h3`
-  margin-bottom: 8px;  /* Add some space below the title */
+  margin-bottom: 8px;  /* Added some space below the title */
+  color: #000; 
 `;
 
 const Description = styled.p`
-  margin-bottom: 12px;  /* Add some space below the description */
+  margin-bottom: 12px;  /* Added some space below the description */
+  color: #000; 
 `;
 
 const DateText = styled.small`
-  margin-top: 8px;  /* Optional: Add some space above the date */
+  margin-top: 8px;  /* Added some space above the date */
+  color: #000; 
 `;
 
 const ImageCard: React.FC<{ pet: Pet; isSelected: boolean; onClick: () => void }> = ({ pet, isSelected, onClick }) => {
